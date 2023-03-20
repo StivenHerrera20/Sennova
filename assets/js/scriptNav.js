@@ -1,5 +1,6 @@
 window.addEventListener("DOMContentLoaded", (event) => {
   // Navbar shrink function
+  const btnIni = document.querySelector("#btnIniciarS");
   var navbarShrink = function () {
     const navbarCollapsible = document.body.querySelector("#mainNav");
     if (!navbarCollapsible) {
@@ -7,8 +8,29 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
     if (window.scrollY === 0) {
       navbarCollapsible.classList.remove("navbar-shrink");
+      btnIni.innerHTML = "";
+      const btnIniciar = document.createElement("a");
+      btnIniciar.setAttribute("class", "nav-link");
+      btnIniciar.setAttribute("href", "./login.html");
+      btnIniciar.innerHTML = "Iniciar sesion";
+      btnIni.appendChild(btnIniciar);
     } else {
       navbarCollapsible.classList.add("navbar-shrink");
+      btnIni.innerHTML = "";
+      const btnIniciar = document.createElement("a");
+      btnIniciar.setAttribute("class", "nav-link btn btn-light");
+      btnIniciar.setAttribute("href", "./login.html");
+      btnIniciar.style = "color: #cca000";
+      btnIniciar.innerHTML = "Iniciar sesion";
+      btnIniciar.addEventListener("mouseover", () => {
+        btnIniciar.style.backgroundColor = "#FFC800";
+        btnIniciar.style.color = "white";
+      });
+      btnIniciar.addEventListener("mouseout", () => {
+        btnIniciar.setAttribute("class", "nav-link btn btn-light");
+        btnIniciar.style = "color: #cca000";
+      });
+      btnIni.appendChild(btnIniciar);
     }
   };
 
