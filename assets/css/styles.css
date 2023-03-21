@@ -11812,7 +11812,6 @@ p {
 
 /* navbar index */
 
-
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -11887,8 +11886,8 @@ p {
     margin-right: 0;
   }
 }
-#btnIniciar a{
-  color: #cca000 ;
+#btnIniciar a {
+  color: #cca000;
 }
 header.masthead {
   padding-top: 10.5rem;
@@ -12092,6 +12091,15 @@ header.masthead .masthead-heading {
   border: 7px solid #e9ecef;
   border-radius: 100%;
   background-color: #ffc800;
+}
+#logoCss {
+  background-color: #379ad6;
+}
+#logoHtml {
+  background-color: white;
+}
+#logoJS {
+  background-color: rgb(240, 219, 79);
 }
 .timeline > li .timeline-image h4,
 .timeline > li .timeline-image .h4 {
